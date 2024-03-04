@@ -10,7 +10,12 @@ def caesar_cypher(word,number):
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     for character in word:
         alpha_index = alpha.index(character)
-        new_alpha = alpha[alpha_index+number]
+        checker = alpha_index+number
+        if checker > 25:
+            checker -= 26
+        elif checker < -26:
+            checker += 25
+        new_alpha = alpha[checker]
         result += new_alpha
     return result
 word_number = input().split(', ')
