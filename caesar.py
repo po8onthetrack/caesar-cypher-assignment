@@ -11,10 +11,8 @@ def caesar_cypher(word,number):
     for character in word:
         alpha_index = alpha.index(character)
         checker = alpha_index+number
-        if checker > 25:
-            checker -= 26
-        elif checker < -26:
-            checker += 25
+        if checker > 25 or checker < -26:
+            checker  = checker%26
         new_alpha = alpha[checker]
         result += new_alpha
     return result
