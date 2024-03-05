@@ -1,5 +1,5 @@
 def caesar_cypher(word,number):
-    ''' this funcrion shifts each letter in the plaintext by a fixed number of positions down or up the alphabet
+    ''' this function shifts each letter in the plaintext by a fixed number of positions down or up the alphabet
     arg:
         word: an string input represents the word
         number: an integer input for shifting 
